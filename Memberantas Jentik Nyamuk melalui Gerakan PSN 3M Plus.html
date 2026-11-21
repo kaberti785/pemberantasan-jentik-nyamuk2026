@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memberantas Jentik Nyamuk melalui Gerakan PSN 3M Plus</title>
+<meta name="description" content="Satuan Acara Penyuluhan: memberantas jentik nyamuk melalui Gerakan PSN 3M Plus dan pemantauan Jumantik mandiri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f4ed;
+    --ink:#1c1c1c;
+    --ink-82:rgba(28,28,28,.82);
+    --ink-40:rgba(28,28,28,.4);
+    --ink-04:rgba(28,28,28,.04);
+    --ink-03:rgba(28,28,28,.03);
+    --muted:#5f5f5d;
+    --line:#eceae4;
+    --off:#fcfbf8;
+    --ring:rgba(59,130,246,.5);
+    --focus:rgba(0,0,0,.1) 0 4px 12px;
+    --inset:rgba(0,0,0,0) 0 0 0 0, rgba(0,0,0,0) 0 0 0 0, rgba(255,255,255,.2) 0 .5px 0 0 inset, rgba(0,0,0,.2) 0 0 0 .5px inset, rgba(0,0,0,.05) 0 1px 2px 0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{font-family:'Figtree',ui-sans-serif,system-ui,sans-serif;font-weight:400;font-size:16px;line-height:1.5;color:var(--ink-82);background:var(--cream);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img,svg{display:block;max-width:100%}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{color:var(--ink);font-weight:600}
+  h1{font-size:clamp(38px,7vw,60px);line-height:1.06;letter-spacing:-1.5px}
+  h2{font-size:clamp(30px,4.6vw,48px);line-height:1.04;letter-spacing:-1.2px}
+  h3{font-size:20px;line-height:1.25}
+  .lead{font-size:18px;line-height:1.38;color:var(--muted)}
+  .muted{color:var(--muted)}
+  :focus-visible{outline:none;box-shadow:var(--focus),0 0 0 2px var(--ring)}
+
+  /* tombol */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-radius:6px;font:inherit;font-size:16px;line-height:1.5;cursor:pointer;text-decoration:none;border:0;transition:opacity .15s}
+  .btn:active{opacity:.8}
+  .btn-dark{background:var(--ink);color:var(--off);box-shadow:var(--inset)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--ink-40)}
+  .btn-sm{font-size:14px}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:40;background:var(--cream);border-bottom:1px solid transparent;transition:border-color .2s}
+  header.scrolled{border-bottom-color:var(--line)}
+  nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:-.2px}
+  .brand svg{width:26px;height:26px}
+  nav ul{display:flex;gap:28px;list-style:none;font-size:15px}
+  nav ul a{text-decoration:none;color:var(--ink)}
+  nav ul a:hover{text-decoration:underline;text-underline-offset:4px}
+  .menu-btn{display:none;width:40px;height:40px;border-radius:6px;border:1px solid var(--line);background:var(--cream);cursor:pointer;color:var(--ink)}
+  .menu-btn svg{width:20px;height:20px;margin:auto}
+
+  /* hero */
+  .hero{position:relative;padding:88px 0 0;text-align:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-40px 0 auto 0;height:620px;z-index:-1;
+    background:
+      radial-gradient(34% 46% at 18% 30%,rgba(255,176,150,.38),transparent 70%),
+      radial-gradient(34% 46% at 82% 24%,rgba(160,196,255,.34),transparent 70%),
+      radial-gradient(40% 52% at 52% 62%,rgba(255,214,150,.38),transparent 70%);
+    filter:blur(30px);
+    -webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+  .pill-note{display:inline-block;font-size:14px;color:var(--ink);padding:4px 12px;border:1px solid var(--line);background:rgba(252,251,248,.7);border-radius:9999px;margin-bottom:24px}
+  .hero h1{max-width:860px;margin:0 auto 20px}
+  .hero .lead{max-width:640px;margin:0 auto 32px}
+  .hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .scene{margin:72px auto 0;max-width:1000px;border:1px solid var(--line);border-radius:16px;background:rgba(252,251,248,.6);overflow:hidden;text-align:left}
+  .scene svg{width:100%;height:auto;color:var(--ink)}
+  .scene figcaption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  @keyframes wig{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .wig{transform-box:fill-box;transform-origin:50% 0;animation:wig 2.6s ease-in-out infinite}
+  .wig.b{animation-delay:-.9s}.wig.c{animation-delay:-1.7s}
+  .fly{animation:bob 3.4s ease-in-out infinite}
+
+  /* statistik */
+  .stats{margin-top:96px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:40px 24px 40px 0}
+  .stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
+  .stat b{display:block;font-size:48px;line-height:1;letter-spacing:-1.2px;font-weight:600;color:var(--ink);margin-bottom:10px}
+  .stat span{font-size:15px;color:var(--muted)}
+
+  /* seksi */
+  section{padding:112px 0 0}
+  .sec-top{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:16px;margin-bottom:48px;font-size:14px;color:var(--muted)}
+  .sec-top b{font-weight:600;color:var(--ink)}
+  .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+  .sec-head .lead{max-width:520px}
+
+  .card{border:1px solid var(--line);border-radius:12px;background:var(--cream)}
+  .card.pad{padding:24px}
+
+  /* siklus */
+  .phases{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .phase{border:1px solid var(--line);border-radius:16px;padding:8px}
+  .phase-head{display:flex;justify-content:space-between;align-items:baseline;padding:12px 16px 16px}
+  .phase-head h3{font-size:18px}
+  .phase-head span{font-size:14px;color:var(--muted)}
+  .stages{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .stage{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .stage svg{width:100%;height:96px;color:var(--ink);margin-bottom:8px}
+  .stage h4{font-size:16px;font-weight:600;color:var(--ink)}
+  .stage p{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.45}
+  .phase.key{background:var(--ink-03)}
+  .callout-line{margin-top:16px;padding:16px 20px;border:1px solid var(--line);border-radius:12px;font-size:15px}
+  .callout-line b{color:var(--ink);font-weight:600}
+
+  /* alasan */
+  .reasons{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+  .reason{padding:32px 32px 32px 0;border-bottom:1px solid var(--line)}
+  .reason:nth-child(even){padding-left:32px;padding-right:0;border-left:1px solid var(--line)}
+  .reason small{display:block;font-size:14px;color:var(--muted);margin-bottom:12px}
+  .reason h3{margin-bottom:8px}
+  .reason p{color:var(--muted)}
+
+  /* 3M */
+  .m3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .m3 .card{padding:24px;display:flex;flex-direction:column;gap:16px}
+  .m3 svg{width:64px;height:64px;color:var(--ink)}
+  .m3 .ltr{font-size:14px;color:var(--muted)}
+  .m3 p{color:var(--muted)}
+  .m3 .tip{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:14px}
+
+  /* plus */
+  .split{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .plus-list{list-style:none;border-top:1px solid var(--line)}
+  .plus-list li{display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  .plus-list li span{font-size:14px;color:var(--muted);min-width:24px}
+
+  /* titik rawan */
+  .spots{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .spot{padding:20px;display:flex;flex-direction:column;gap:12px}
+  .spot svg{width:56px;height:56px;color:var(--ink)}
+  .spot h3{font-size:18px}
+  .spot p{font-size:15px;color:var(--muted)}
+
+  /* tabel */
+  .tbl-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  table{width:100%;border-collapse:collapse;text-align:left}
+  th{font-size:14px;font-weight:400;color:var(--muted);padding:14px 20px;background:var(--ink-03);border-bottom:1px solid var(--line)}
+  td{padding:20px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+  tr.hl td{background:var(--ink-03)}
+  .tag{display:inline-block;margin-left:8px;font-size:12px;font-weight:600;color:var(--ink);border:1px solid var(--ink-40);border-radius:4px;padding:0 6px;vertical-align:2px}
+
+  /* jumantik */
+  .jum{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+  .tab{padding:10px 8px;border-radius:6px;border:1px solid var(--ink-40);background:transparent;color:var(--ink);font:inherit;font-size:15px;cursor:pointer;transition:opacity .15s}
+  .tab[aria-selected="true"]{background:var(--ink);color:var(--off);border-color:var(--ink);box-shadow:var(--inset)}
+  .tab:active{opacity:.8}
+  .panel{border:1px solid var(--line);border-radius:12px;padding:8px 24px 24px}
+  .panel h3{padding:20px 0 4px}
+  .panel .sub{color:var(--muted);font-size:15px;margin-bottom:12px}
+  .chk{list-style:none}
+  .chk li{border-top:1px solid var(--line)}
+  .chk label{display:flex;gap:14px;align-items:center;padding:14px 0;cursor:pointer;color:var(--ink)}
+  .chk input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;border:1px solid var(--ink-40);border-radius:4px;background:var(--cream);display:grid;place-items:center;cursor:pointer}
+  .chk input:checked{background:var(--ink);border-color:var(--ink)}
+  .chk input:checked::after{content:"";width:9px;height:5px;border-left:2px solid var(--off);border-bottom:2px solid var(--off);transform:rotate(-45deg) translate(1px,-1px)}
+  .chk input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--ink-40)}
+  .bar{height:4px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:8px}
+  .bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .3s}
+  .progress{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-top:20px}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+
+  /* efektivitas */
+  .big{border:1px solid var(--line);border-radius:16px;padding:64px 32px;text-align:center;position:relative;overflow:hidden}
+  .big::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(40% 70% at 20% 100%,rgba(255,176,150,.3),transparent 70%),radial-gradient(40% 70% at 80% 100%,rgba(160,196,255,.28),transparent 70%),radial-gradient(40% 70% at 50% 110%,rgba(255,214,150,.32),transparent 70%)}
+  .big>*{position:relative;z-index:1}
+  .big .num{font-size:clamp(72px,14vw,140px);line-height:1;letter-spacing:-3px;font-weight:600;color:var(--ink)}
+  .big p{max-width:560px;margin:16px auto 0;font-size:18px;line-height:1.4}
+  .big blockquote{max-width:620px;margin:40px auto 0;padding-top:32px;border-top:1px solid var(--line);color:var(--ink);font-size:20px;line-height:1.35;font-weight:600;letter-spacing:-.3px}
+
+  /* kuis */
+  .qa{border-top:1px solid var(--line)}
+  .qa details{border-bottom:1px solid var(--line)}
+  .qa summary{list-style:none;cursor:pointer;display:flex;gap:20px;align-items:baseline;padding:22px 0;color:var(--ink);font-size:18px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary span{font-size:14px;color:var(--muted);min-width:20px}
+  .qa summary::after{content:"+";margin-left:auto;font-size:22px;line-height:1;color:var(--muted);transition:transform .2s}
+  .qa details[open] summary::after{transform:rotate(45deg)}
+  .qa .ans{padding:0 0 24px 40px;max-width:760px;color:var(--ink-82)}
+  .qa .ans ul{padding-left:18px;margin-top:6px}
+
+  /* kegiatan */
+  .info{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .info div{padding:18px 20px;border-bottom:1px solid var(--line)}
+  .info div:nth-child(odd){border-right:1px solid var(--line)}
+  .info div:nth-last-child(-n+2){border-bottom:0}
+  .info small{display:block;font-size:13px;color:var(--muted);margin-bottom:2px}
+  .info span{color:var(--ink)}
+  .run{margin-top:48px}
+  .run-bar{display:flex;gap:4px;margin-bottom:16px}
+  .run-bar i{display:block;height:8px;border-radius:2px;background:var(--ink)}
+  .run-bar i:nth-child(1){flex:5;opacity:.35}.run-bar i:nth-child(2){flex:18}.run-bar i:nth-child(3){flex:5;opacity:.6}.run-bar i:nth-child(4){flex:2;opacity:.35}
+  .run-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .run-grid .card{padding:20px}
+  .run-grid small{font-size:14px;color:var(--muted)}
+  .run-grid h3{font-size:18px;margin:2px 0 10px}
+  .run-grid ul{padding-left:18px;font-size:14px;color:var(--muted)}
+  .run-grid li+li{margin-top:4px}
+
+  /* tim */
+  .dosen{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;padding:32px;border:1px solid var(--ink-40);border-radius:16px;margin-bottom:16px}
+  .mono{width:88px;height:88px;border-radius:9999px;border:1px solid var(--line);background:var(--ink-04);display:grid;place-items:center;font-size:30px;font-weight:600;color:var(--ink);letter-spacing:-1px}
+  .dosen small{font-size:14px;color:var(--muted)}
+  .dosen h3{font-size:28px;letter-spacing:-.6px;margin:2px 0}
+  .team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .member{padding:24px}
+  .member .mono{width:64px;height:64px;font-size:22px;margin-bottom:20px}
+  .member h3{font-size:18px}
+  .member small{display:block;font-size:14px;color:var(--muted)}
+  .member code{display:inline-block;margin-top:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--ink);background:var(--ink-04);border-radius:4px;padding:2px 8px}
+  .inst{margin-top:24px;font-size:15px;color:var(--muted)}
+
+  /* footer */
+  footer{margin:128px 0 24px}
+  .foot{border:1px solid var(--line);border-radius:16px;padding:40px;position:relative;overflow:hidden}
+  .foot::before{content:"";position:absolute;inset:auto 0 0 0;height:70%;z-index:0;background:radial-gradient(40% 80% at 15% 120%,rgba(255,176,150,.32),transparent 70%),radial-gradient(40% 80% at 85% 120%,rgba(160,196,255,.3),transparent 70%),radial-gradient(40% 80% at 50% 130%,rgba(255,214,150,.34),transparent 70%)}
+  .foot>*{position:relative;z-index:1}
+  .foot-cols{display:grid;grid-template-columns:1.3fr 1.2fr 1fr;gap:40px}
+  .foot h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:12px}
+  .foot p,.foot li{font-size:14px;color:var(--muted)}
+  .foot ul{list-style:none;display:grid;gap:8px}
+  .foot .hotline{font-size:28px;font-weight:600;letter-spacing:-.6px;color:var(--ink);margin-top:4px}
+  .foot-end{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:1024px){
+    .spots{grid-template-columns:repeat(2,1fr)}
+    .run-grid{grid-template-columns:repeat(2,1fr)}
+    .team{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:860px){
+    .sec-head,.split,.jum{grid-template-columns:1fr;gap:32px}
+    .sec-head{align-items:start;gap:16px}
+    .m3,.phases{grid-template-columns:1fr}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .stat:nth-child(3){padding-left:0;border-left:0}
+    .stat:nth-child(n+3){border-top:1px solid var(--line)}
+    .foot-cols{grid-template-columns:1fr}
+  }
+  @media(max-width:768px){
+    .menu-btn{display:grid}
+    nav ul{position:absolute;left:0;right:0;top:64px;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 24px 16px;display:none}
+    nav ul.open{display:flex}
+    nav ul li a{display:block;padding:12px 0}
+    nav>.btn{display:none}
+    section{padding-top:80px}
+    .hero{padding-top:56px}
+    .scene{margin-top:48px}
+    .stats{margin-top:64px}
+    .reasons{grid-template-columns:1fr}
+    .reason,.reason:nth-child(even){padding:24px 0;border-left:0}
+    .info{grid-template-columns:1fr}
+    .info div:nth-child(odd){border-right:0}
+    .info div:nth-last-child(2){border-bottom:1px solid var(--line)}
+    .dosen{grid-template-columns:1fr;padding:24px}
+    .big{padding:48px 20px}
+    .foot{padding:28px 20px}
+    /* tabel jadi kartu */
+    thead{display:none}
+    table,tbody,tr,td{display:block;width:100%}
+    tr{border-bottom:1px solid var(--line);padding:8px 0}
+    tr:last-child{border-bottom:0}
+    td{border:0;padding:8px 20px;white-space:normal!important}
+    td[data-l]::before{content:attr(data-l);display:block;font-size:13px;color:var(--muted);font-weight:400}
+  }
+  @media(max-width:560px){
+    .spots,.run-grid,.team,.stages{grid-template-columns:1fr 1fr}
+    .stat b{font-size:36px}.scene .lbl{display:none}.stage{padding:12px}.stage p{font-size:13px}
+    .tabs{grid-template-columns:repeat(2,1fr)}
+    .qa summary{font-size:16px}
+    .qa .ans{padding-left:0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .wig,.fly{animation:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- simbol gambar (garis tangan, satu warna) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="telur" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 78h84"/>
+      <ellipse cx="20" cy="64" rx="5.5" ry="10" fill="rgba(28,28,28,.06)" transform="rotate(-8 20 64)"/>
+      <ellipse cx="34" cy="63" rx="5.5" ry="10" fill="rgba(28,28,28,.06)" transform="rotate(6 34 63)"/>
+      <ellipse cx="48" cy="64" rx="5.5" ry="10" fill="rgba(28,28,28,.06)" transform="rotate(-4 48 64)"/>
+      <ellipse cx="62" cy="63" rx="5.5" ry="10" fill="rgba(28,28,28,.06)" transform="rotate(9 62 63)"/>
+      <ellipse cx="76" cy="64" rx="5.5" ry="10" fill="rgba(28,28,28,.06)" transform="rotate(-6 76 64)"/>
+      <path d="M14 28c8-5 14 5 22 0s14 5 22 0 14 5 22 0" stroke-width="1.5" opacity=".5"/>
+    </symbol>
+    <symbol id="jentik" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 14c8-5 14 5 22 0s14 5 22 0 14 5 22 0 8 2 8 2" stroke-width="1.5" opacity=".5"/>
+      <path d="M64 16v12"/>
+      <path d="M64 28c0 18-8 26-20 36" stroke-width="7"/>
+      <circle cx="40" cy="68" r="9" fill="rgba(28,28,28,.08)"/>
+      <circle cx="31" cy="84" r="5.5" fill="rgba(28,28,28,.08)"/>
+      <path d="M26 88l-5 3M30 90l-1 5M35 89l3 4" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="jentik-b" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M64 16v12"/>
+      <path d="M64 28c0 18-8 26-20 36" stroke-width="7"/>
+      <circle cx="40" cy="68" r="9" fill="rgba(28,28,28,.08)"/>
+      <circle cx="31" cy="84" r="5.5" fill="rgba(28,28,28,.08)"/>
+      <path d="M26 88l-5 3M30 90l-1 5M35 89l3 4" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="pupa" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 14c8-5 14 5 22 0s14 5 22 0 14 5 22 0 8 2 8 2" stroke-width="1.5" opacity=".5"/>
+      <path d="M38 36l-4-12M50 34l3-12"/>
+      <circle cx="46" cy="52" r="17" fill="rgba(28,28,28,.08)"/>
+      <path d="M40 46a8 8 0 0 1 8-3" stroke-width="1.5"/>
+      <path d="M60 62c14 4 16 18 4 24" stroke-width="5"/>
+    </symbol>
+    <symbol id="nyamuk" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="50" cy="30" rx="22" ry="7" fill="rgba(28,28,28,.05)" transform="rotate(-24 50 30)"/>
+      <circle cx="22" cy="52" r="6" fill="rgba(28,28,28,.08)"/>
+      <path d="M17 55L4 63M21 46l-6-10M26 47l-2-11" />
+      <ellipse cx="40" cy="52" rx="11" ry="9" fill="rgba(28,28,28,.08)"/>
+      <ellipse cx="70" cy="57" rx="22" ry="6.5" fill="rgba(28,28,28,.08)" transform="rotate(10 70 57)"/>
+      <path d="M35 60l-8 20-4 4M41 61l1 22-2 6M48 60l12 18 6 4" stroke-width="1.5"/>
+      <path d="M60 52v10M70 54v10M80 56v8" stroke-width="1" opacity=".6"/>
+    </symbol>
+    <symbol id="bak" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 18h48"/><path d="M11 18l3 32a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4l3-32"/>
+      <path d="M15 34c5-4 9 4 14 0s9 4 14 0 7 3 6 1" opacity=".6"/>
+      <path d="M40 8l10 10M36 12l-4 4" />
+    </symbol>
+    <symbol id="ember" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 24h44"/><path d="M26 24v-5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5"/>
+      <path d="M13 24l3 28a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3l3-28"/>
+      <path d="M22 36h20M23 44h18" opacity=".5"/>
+    </symbol>
+    <symbol id="daur" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M44 22a16 16 0 0 0-27 3"/><path d="M16 25l-2-9M16 25l9-2"/>
+      <path d="M20 42a16 16 0 0 0 27-3"/><path d="M48 39l2 9M48 39l-9 2"/>
+      <circle cx="32" cy="32" r="6" fill="rgba(28,28,28,.06)"/>
+    </symbol>
+    <symbol id="ban" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="32" cy="34" r="22" fill="rgba(28,28,28,.04)"/><circle cx="32" cy="34" r="11"/>
+      <path d="M22 40c4-3 6 3 10 0s6 3 10 0" opacity=".6"/>
+      <path d="M14 10l3 5M22 6l1 6M50 10l-3 5" opacity=".6"/>
+    </symbol>
+    <symbol id="vas" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M24 8h16M26 8v10c0 6-10 8-10 22 0 9 7 16 16 16s16-7 16-16c0-14-10-16-10-22V8"/>
+      <path d="M18 40c5-3 9 3 14 0s9 3 14 0" opacity=".6"/>
+      <path d="M32 8c-2-4 0-6 4-6" opacity=".6"/>
+    </symbol>
+    <symbol id="talang" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 20h52v6a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="rgba(28,28,28,.04)"/>
+      <path d="M14 32v16M50 32v16" opacity=".6"/>
+      <path d="M14 54c-2-3 0-4 0-4s2 1 0 4zM50 54c-2-3 0-4 0-4s2 1 0 4z" opacity=".8"/>
+      <path d="M16 24h32" opacity=".5"/>
+    </symbol>
+    <symbol id="logo" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="16" cy="16" r="13"/>
+      <path d="M17 9v5c0 5-3 8-7 10" stroke-width="3.4"/>
+      <circle cx="9" cy="23" r="3" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header id="top">
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#atas"><svg><use href="#logo"/></svg>PSN 3M Plus</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul id="menu">
+        <li><a href="#siklus">Siklus nyamuk</a></li>
+        <li><a href="#3m">3M Plus</a></li>
+        <li><a href="#jumantik">Jumantik</a></li>
+        <li><a href="#uji">Uji pemahaman</a></li>
+        <li><a href="#tim">Tim penyuluh</a></li>
+      </ul>
+      <a class="btn btn-dark btn-sm" href="#uji">Coba jawab</a>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="pill-note">Satuan Acara Penyuluhan · 30 menit</span>
+    <h1>Putus rantai nyamuk selagi masih jentik.</h1>
+    <p class="lead">Fogging hanya mengusir nyamuk yang sudah terbang. Cara yang paling ampuh mencegah demam berdarah adalah menguras, menutup, dan mendaur ulang, dilakukan tiap minggu oleh warga sendiri.</p>
+    <div class="cta">
+      <a class="btn btn-dark" href="#siklus">Mulai dari siklus hidupnya</a>
+      <a class="btn btn-ghost" href="#jumantik">Jadwal Jumantik</a>
+    </div>
+
+    <figure class="scene reveal">
+      <svg viewBox="0 0 1000 380" role="img" aria-label="Penampang bak mandi berisi jentik nyamuk, dengan telur menempel di dinding dan seekor nyamuk dewasa terbang di atasnya">
+        <!-- bak -->
+        <path d="M200 120 L228 330 a14 14 0 0 0 14 12 H758 a14 14 0 0 0 14-12 L800 120" fill="rgba(28,28,28,.02)" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M180 120h640" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- air -->
+        <path d="M209 196c24-9 44 9 68 0s44 9 68 0 44 9 68 0 44 9 68 0 44 9 68 0 44 9 68 0 44 9 68 0 44 9 68 0 32 4 24 2 L760 330 a10 10 0 0 1-10 8 H250 a10 10 0 0 1-10-8 Z" fill="rgba(28,28,28,.05)" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- telur di dinding -->
+        <g fill="rgba(28,28,28,.1)" stroke="currentColor" stroke-width="1.6">
+          <ellipse cx="216" cy="188" rx="4" ry="7" transform="rotate(8 216 188)"/><ellipse cx="226" cy="186" rx="4" ry="7" transform="rotate(-6 226 186)"/><ellipse cx="236" cy="188" rx="4" ry="7" transform="rotate(6 236 188)"/>
+          <ellipse cx="784" cy="188" rx="4" ry="7" transform="rotate(-8 784 188)"/><ellipse cx="774" cy="186" rx="4" ry="7" transform="rotate(6 774 186)"/><ellipse cx="764" cy="188" rx="4" ry="7" transform="rotate(-6 764 188)"/>
+        </g>
+        <!-- jentik -->
+        <g>
+          <g class="wig"><use href="#jentik-b" x="300" y="170" width="100" height="100"/></g>
+          <g class="wig b"><use href="#jentik-b" x="440" y="196" width="80" height="80"/></g>
+          <g class="wig c"><use href="#jentik-b" x="560" y="170" width="110" height="110"/></g>
+          <g class="wig b"><use href="#jentik-b" x="680" y="200" width="70" height="70"/></g>
+          <g class="wig"><use href="#jentik-b" x="372" y="232" width="64" height="64"/></g>
+        </g>
+        <!-- nyamuk -->
+        <g class="fly"><use href="#nyamuk" x="610" y="22" width="130" height="130"/></g>
+        <path d="M600 112c-40 6-70 22-96 50" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 7" stroke-linecap="round" opacity=".5"/>
+        <!-- label -->
+        <g class="lbl" font-family="Figtree,system-ui,sans-serif" font-size="16" fill="currentColor">
+          <path d="M150 124l60 54" stroke="currentColor" stroke-width="1" opacity=".5" fill="none"/>
+          <text x="28" y="104" opacity=".85">telur menempel</text>
+          <text x="28" y="124" opacity=".85">di dinding bak</text>
+          <text x="470" y="322" opacity=".85">jentik bergerak aktif</text>
+        </g>
+      </svg>
+      <figcaption><span>Fase telur dan jentik berlangsung 7–10 hari di air jernih.</span><span>Waktu terbaik untuk memutus rantainya.</span></figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>7–10</b><span>hari fase telur dan jentik di dalam air</span></div>
+    <div class="stat"><b>100–200</b><span>telur dari satu nyamuk betina sekali bertelur</span></div>
+    <div class="stat"><b>1x</b><span>seminggu menguras dan menyikat bak penampungan</span></div>
+    <div class="stat"><b>&gt;80%</b><span>risiko DBD bisa turun bila PSN 3M Plus konsisten</span></div>
+  </div>
+</div>
+
+<!-- 01 SIKLUS -->
+<section id="siklus">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>01</b> Ancaman DBD dan siklus hidup nyamuk</div>
+    <div class="sec-head reveal">
+      <h2>Satu nyamuk betina, dua fase hidup.</h2>
+      <p class="lead">Demam Berdarah Dengue ditularkan nyamuk betina <i>Aedes aegypti</i>, yang butuh darah manusia untuk mematangkan telurnya.</p>
+    </div>
+    <div class="phases reveal">
+      <div class="phase key">
+        <div class="phase-head"><h3>Fase air</h3><span>7–10 hari</span></div>
+        <div class="stages">
+          <div class="stage"><svg><use href="#telur"/></svg><h4>Telur</h4><p>Diletakkan nyamuk betina di dinding wadah berisi air jernih.</p></div>
+          <div class="stage"><svg><use href="#jentik"/></svg><h4>Jentik (larva)</h4><p>Menetas dan bergerak aktif di dalam air.</p></div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-head"><h3>Fase dewasa</h3><span>2–4 minggu</span></div>
+        <div class="stages">
+          <div class="stage"><svg><use href="#pupa"/></svg><h4>Pupa</h4><p>Jentik berubah menjadi pupa dalam 2 hari.</p></div>
+          <div class="stage"><svg><use href="#nyamuk"/></svg><h4>Nyamuk dewasa</h4><p>Menetas, siap terbang dan menularkan virus Dengue.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="callout-line reveal"><b>Fase air adalah waktu terbaik</b> dan paling efektif untuk memutus rantai hidup nyamuk.</p>
+  </div>
+</section>
+
+<!-- 02 ALASAN -->
+<section>
+  <div class="wrap">
+    <div class="sec-top reveal"><b>02</b> Mengapa fokus pada jentik</div>
+    <div class="sec-head reveal">
+      <h2>Lebih mudah menghentikan jentik daripada mengejar nyamuk.</h2>
+      <p class="lead">Banyak warga masih mengandalkan pengasapan. Padahal fogging hanya membunuh nyamuk dewasa untuk sementara dan tidak menyentuh jentiknya.</p>
+    </div>
+    <div class="reasons reveal">
+      <div class="reason"><small>a</small><h3>Memutus rantai sejak dini</h3><p>Menghancurkan jentik jauh lebih mudah dan efektif dibandingkan membunuh nyamuk dewasa yang bebas terbang.</p></div>
+      <div class="reason"><small>b</small><h3>Menekan populasi secara massal</h3><p>Satu nyamuk betina mampu bertelur 100–200 butir setiap kali bertelur.</p></div>
+      <div class="reason"><small>c</small><h3>Solusi jangka panjang</h3><p>Fogging hanya membunuh nyamuk dewasa sementara, sedangkan memberantas jentik mencegah lahirnya generasi nyamuk baru.</p></div>
+      <div class="reason"><small>d</small><h3>Hemat biaya dan aman</h3><p>PSN mandiri gratis atau murah, dan bebas dari residu bahan kimia berlebih.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 3M -->
+<section id="3m">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>03</b> Gerakan PSN 3M</div>
+    <div class="sec-head reveal">
+      <h2>Tiga langkah yang bisa dimulai dari kamar mandi.</h2>
+      <p class="lead">Pemberantasan Sarang Nyamuk, disingkat PSN, bertumpu pada tiga kebiasaan sederhana.</p>
+    </div>
+    <div class="m3">
+      <article class="card reveal">
+        <svg><use href="#bak"/></svg>
+        <div><span class="ltr">M pertama</span><h3>Menguras</h3></div>
+        <p>Bersihkan dan kuras tempat penampungan air seperti bak mandi, toren, dan ember secara rutin, minimal 1 kali seminggu.</p>
+        <div class="tip">Sikat dindingnya, supaya telur yang menempel ikut luruh.</div>
+      </article>
+      <article class="card reveal">
+        <svg><use href="#ember"/></svg>
+        <div><span class="ltr">M kedua</span><h3>Menutup</h3></div>
+        <p>Tutup rapat wadah penampungan air seperti drum, kendi, gentong, dan ember.</p>
+        <div class="tip">Dengan begitu nyamuk betina tidak bisa masuk untuk bertelur.</div>
+      </article>
+      <article class="card reveal">
+        <svg><use href="#daur"/></svg>
+        <div><span class="ltr">M ketiga</span><h3>Mendaur ulang</h3></div>
+        <p>Manfaatkan kembali atau daur ulang barang bekas yang berpotensi menampung air hujan: botol plastik, kaleng, dan ban bekas.</p>
+        <div class="tip">Barang bekas yang dibiarkan terbuka cepat jadi sarang jentik.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PLUS -->
+<section>
+  <div class="wrap">
+    <div class="sec-top reveal"><b>04</b> Langkah "Plus"</div>
+    <div class="split">
+      <div class="reveal">
+        <h2>Lalu tambahkan perlindungan ekstra.</h2>
+        <p class="lead" style="margin-top:16px">3M belum cukup bila ada wadah yang sulit dikuras. Lengkapi dengan lima tindakan ini.</p>
+      </div>
+      <ul class="plus-list reveal">
+        <li><span>01</span>Menaburkan bubuk larvasida (Abate) pada penampungan air yang sulit dikuras.</li>
+        <li><span>02</span>Menanam tanaman pengusir nyamuk, seperti serai, lavender, dan zodia.</li>
+        <li><span>03</span>Memelihara ikan pemakan jentik (ikan kepala timah, cupang, atau gupi) di kolam atau bak.</li>
+        <li><span>04</span>Memasang kawat kasa pada ventilasi rumah.</li>
+        <li><span>05</span>Menghindari kebiasaan menggantung pakaian kotor di dalam kamar.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 TITIK RAWAN -->
+<section>
+  <div class="wrap">
+    <div class="sec-top reveal"><b>05</b> Titik rawan perkembangbiakan jentik</div>
+    <div class="sec-head reveal">
+      <h2>Tempat yang sering luput dari perhatian.</h2>
+      <p class="lead">Periksa di dalam dan di luar rumah. Empat titik ini paling sering jadi tempat nyamuk bertelur.</p>
+    </div>
+    <div class="spots">
+      <article class="card spot reveal"><svg><use href="#bak"/></svg><h3>Bak dan penampungan air</h3><p>Dinding bak mandi yang jarang disikat menyimpan telur yang tahan lama, bahkan ketika airnya sudah kering.</p></article>
+      <article class="card spot reveal"><svg><use href="#ban"/></svg><h3>Ban dan barang bekas</h3><p>Ban bekas di luar ruangan menampung air hujan dan jadi tempat favorit bertelur.</p></article>
+      <article class="card spot reveal"><svg><use href="#vas"/></svg><h3>Vas bunga dan pot air</h3><p>Piringan pot tanaman hias atau vas di dalam rumah yang jarang diganti airnya.</p></article>
+      <article class="card spot reveal"><svg><use href="#talang"/></svg><h3>Talang dan tempat minum hewan</h3><p>Saluran talang yang tersumbat dan wadah minum hewan peliharaan.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PERBANDINGAN -->
+<section>
+  <div class="wrap">
+    <div class="sec-top reveal"><b>06</b> Perbandingan metode</div>
+    <div class="sec-head reveal">
+      <h2>Mana yang paling masuk akal untuk rumah tangga?</h2>
+      <p class="lead">Empat cara membasmi jentik, dibandingkan dari kelebihan, frekuensi, dan biayanya.</p>
+    </div>
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th>Metode</th><th>Kelebihan</th><th>Frekuensi</th><th>Biaya dan efisiensi</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td data-l="Metode">Pengurasan rutin (3M)<span class="tag">Utama</span></td><td data-l="Kelebihan">Memutus telur dan jentik secara alami tanpa kimia</td><td data-l="Frekuensi">1x seminggu</td><td data-l="Biaya dan efisiensi">Gratis dan sangat efektif</td></tr>
+          <tr><td data-l="Metode">Abatisasi (larvasida)</td><td data-l="Kelebihan">Sangat baik untuk wadah besar atau sulit dikuras</td><td data-l="Frekuensi">2–3 bulan sekali</td><td data-l="Biaya dan efisiensi">Murah dan tahan lama</td></tr>
+          <tr><td data-l="Metode">Ikan pemakan jentik</td><td data-l="Kelebihan">Pengendalian biologis yang ramah lingkungan</td><td data-l="Frekuensi">Kontinu</td><td data-l="Biaya dan efisiensi">Sekali beli dan alami</td></tr>
+          <tr><td data-l="Metode">Pengasapan (fogging)</td><td data-l="Kelebihan">Membunuh nyamuk dewasa, hanya saat KLB</td><td data-l="Frekuensi">Kondisional</td><td data-l="Biaya dan efisiensi">Mahal dan tidak membunuh jentik</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 07 JUMANTIK -->
+<section id="jumantik">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>07</b> Program Jumantik</div>
+    <div class="jum">
+      <div class="reveal">
+        <h2>Jadi juru pemantau jentik di rumah sendiri.</h2>
+        <p class="lead" style="margin:16px 0 24px">Jumantik berarti juru pemantau jentik mandiri. Bagi tugasnya per minggu, supaya tidak ada sudut rumah yang terlewat.</p>
+        <p class="note" style="margin:0">Centang tiap tugas yang sudah dikerjakan. Centangannya hanya tersimpan di browser ini.</p>
+      </div>
+      <div class="reveal">
+        <div class="tabs" role="tablist" aria-label="Pilih minggu">
+          <button class="tab" role="tab" aria-selected="true" data-w="0" id="t0" aria-controls="panel">Minggu 1</button>
+          <button class="tab" role="tab" aria-selected="false" data-w="1" id="t1" aria-controls="panel">Minggu 2</button>
+          <button class="tab" role="tab" aria-selected="false" data-w="2" id="t2" aria-controls="panel">Minggu 3</button>
+          <button class="tab" role="tab" aria-selected="false" data-w="3" id="t3" aria-controls="panel">Minggu 4</button>
+        </div>
+        <div class="panel" id="panel" role="tabpanel">
+          <h3 id="pTitle"></h3>
+          <p class="sub" id="pSub"></p>
+          <ul class="chk" id="pList"></ul>
+          <div class="progress"><span id="pText"></span><span id="pAll"></span></div>
+          <div class="bar"><i id="pBar"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 EFEKTIVITAS -->
+<section>
+  <div class="wrap">
+    <div class="sec-top reveal"><b>08</b> Efektivitas gerakan</div>
+    <div class="big reveal">
+      <div class="num">&gt;80%</div>
+      <p>Penurunan risiko kasus DBD bila PSN 3M Plus dijalankan konsisten oleh seluruh warga. Keberhasilannya bergantung pada partisipasi aktif setiap rumah tangga.</p>
+      <blockquote>"Memberantas jentik hari ini adalah tindakan nyata menyelamatkan jiwa keluarga dan tetangga kita besok."</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 09 UJI -->
+<section id="uji">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>09</b> Uji pemahaman</div>
+    <div class="sec-head reveal">
+      <h2>Sudah paham? Coba jawab dulu.</h2>
+      <p class="lead">Delapan pertanyaan evaluasi dari penyuluhan. Ketuk pertanyaan untuk melihat jawabannya.</p>
+    </div>
+    <div class="qa reveal">
+      <details><summary><span>a</span>Berapa lama fase telur dan jentik nyamuk hidup di dalam air sebelum menjadi nyamuk dewasa?</summary><div class="ans">Fase telur dan jentik berlangsung selama 7–10 hari di dalam air jernih.</div></details>
+      <details><summary><span>b</span>Mengapa membasmi jentik jauh lebih efektif dibandingkan pengasapan (fogging)?</summary><div class="ans">Membasmi jentik memutus rantai nyamuk sebelum bisa terbang, lebih hemat, ramah lingkungan, dan permanen. Fogging hanya membunuh nyamuk dewasa untuk sementara.</div></details>
+      <details><summary><span>c</span>Sebutkan tindakan utama dalam gerakan 3M!</summary><div class="ans">Menguras tempat penampungan air, menutup rapat wadah air, dan mendaur ulang barang bekas.</div></details>
+      <details><summary><span>d</span>Mengapa dinding bak mandi harus disikat saat dikuras?</summary><div class="ans">Telur nyamuk menempel erat di dinding bak mandi dan tetap bisa bertahan hidup meskipun airnya sudah dikeringkan.</div></details>
+      <details><summary><span>e</span>Apa saja tindakan ekstra yang termasuk dalam Langkah "Plus"?</summary><div class="ans">Menabur bubuk Abate, menanam tanaman pengusir nyamuk (serai atau lavender), memelihara ikan pemakan jentik, memasang kawat kasa, dan tidak menggantung baju kotor.</div></details>
+      <details><summary><span>f</span>Sebutkan minimal 3 lokasi titik rawan perkembangbiakan jentik di rumah!</summary><div class="ans">Bak mandi atau toren air, ban atau barang bekas, vas bunga atau pot tanaman, dan tempat minum hewan peliharaan.</div></details>
+      <details><summary><span>g</span>Berapa bulan sekali bubuk Abate (larvasida) perlu ditaburkan kembali?</summary><div class="ans">Setiap 2–3 bulan sekali.</div></details>
+      <details><summary><span>h</span>Berapa persen penurunan risiko DBD jika PSN 3M Plus dilakukan konsisten oleh warga?</summary><div class="ans">Dapat menurunkan risiko kasus DBD hingga lebih dari 80%.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 KEGIATAN -->
+<section id="kegiatan">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>10</b> Tentang penyuluhan</div>
+    <div class="sec-head reveal">
+      <h2>Memberantas jentik nyamuk, Gerakan PSN 3M Plus.</h2>
+      <p class="lead">Strategi efektif pencegahan Demam Berdarah Dengue (DBD) melalui Gerakan Pemberantasan Sarang Nyamuk (PSN) 3M Plus dan pemantauan Jumantik.</p>
+    </div>
+    <div class="info reveal">
+      <div><small>Sasaran</small><span>Masyarakat umum, kepala keluarga, dan ibu rumah tangga</span></div>
+      <div><small>Tempat</small><span>Balai Warga</span></div>
+      <div><small>Hari / tanggal</small><span>Disesuaikan</span></div>
+      <div><small>Waktu</small><span>30 menit</span></div>
+      <div><small>Metode</small><span>Ceramah, tanya jawab, dan diskusi interaktif</span></div>
+      <div><small>Media</small><span>Poster edukasi PSN 3M Plus dan slide PPT</span></div>
+    </div>
+
+    <div class="run reveal">
+      <div class="run-bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="run-grid">
+        <div class="card"><small>5 menit</small><h3>Pembukaan</h3><ul><li>Salam dan perkenalan</li><li>Menyampaikan topik dan tujuan</li><li>Apersepsi singkat soal kasus DBD di lingkungan</li></ul></div>
+        <div class="card"><small>18 menit</small><h3>Pelaksanaan</h3><ul><li>Bahaya DBD dan siklus nyamuk</li><li>Jentik lebih penting daripada fogging</li><li>Langkah 3M Plus dan titik rawan</li><li>Jadwal Jumantik mingguan</li><li>Peragaan bubuk Abate</li><li>Tanya jawab</li></ul></div>
+        <div class="card"><small>5 menit</small><h3>Evaluasi</h3><ul><li>Pertanyaan lisan ke peserta</li><li>Peserta menyebut kembali gerakan 3M Plus</li></ul></div>
+        <div class="card"><small>2 menit</small><h3>Penutup</h3><ul><li>Menyimpulkan inti materi</li><li>Mengajak warga berkomitmen menjaga lingkungan bersih</li><li>Terima kasih dan salam</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 TIM -->
+<section id="tim">
+  <div class="wrap">
+    <div class="sec-top reveal"><b>11</b> Dosen pengampu dan tim penyuluh</div>
+    <div class="sec-head reveal">
+      <h2>Siapa yang menyusun penyuluhan ini.</h2>
+      <p class="lead">Disusun mahasiswa Program Diploma III, dengan bimbingan dosen pengampu mata kuliah.</p>
+    </div>
+
+    <div class="dosen reveal">
+      <div class="mono" aria-hidden="true">FR</div>
+      <div>
+        <small>Dosen pengampu mata kuliah</small>
+        <h3>Ns. Faried Rahman Hidayat, S.Kep., M.Kes</h3>
+      </div>
+    </div>
+
+    <div class="team">
+      <article class="card member reveal"><div class="mono" aria-hidden="true">E</div><small>Penyuluh</small><h3>Ekawati</h3><code>2511102416070</code></article>
+      <article class="card member reveal"><div class="mono" aria-hidden="true">FZ</div><small>Penyuluh</small><h3>Faliza AL Zahra</h3><code>2511102416015</code></article>
+      <article class="card member reveal"><div class="mono" aria-hidden="true">MM</div><small>Penyuluh</small><h3>Maissy Malinda</h3><code>2511102416105</code></article>
+      <article class="card member reveal"><div class="mono" aria-hidden="true">NR</div><small>Penyuluh</small><h3>Nagita Rahmadhani</h3><code>2511102416047</code></article>
+    </div>
+    <p class="inst reveal">Program Diploma III, Fakultas Ilmu Keperawatan, Universitas Muhammadiyah Kalimantan Timur, 2026.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-cols">
+        <div>
+          <h4>Penutup</h4>
+          <p>PSN 3M Plus adalah langkah paling sederhana, hemat, dan ampuh untuk mencegah penularan DBD. Kebersihan rumah tidak bisa dibebankan pada fogging semata. Dibutuhkan kepedulian dan kerja sama seluruh anggota keluarga.</p>
+        </div>
+        <div>
+          <h4>Referensi</h4>
+          <ul>
+            <li>Kementerian Kesehatan RI. (2026). Edukasi Kesehatan Masyarakat: Memberantas Jentik Nyamuk melalui Gerakan PSN 3M Plus. Jakarta: Kemenkes RI.</li>
+            <li>Gerakan Masyarakat Hidup Sehat (GERMAS). Strategi Efektif Pencegahan Demam Berdarah Dengue (DBD).</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Layanan Halo Kemenkes</h4>
+          <p class="hotline">1500-567</p>
+        </div>
+      </div>
+      <div class="foot-end"><span>Universitas Muhammadiyah Kalimantan Timur · Fakultas Ilmu Keperawatan · 2026</span><a href="#atas">Kembali ke atas</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+
+  // menu mobile
+  var mb=document.getElementById('menuBtn'), menu=document.getElementById('menu');
+  mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+  // garis bawah header saat scroll
+  var hd=document.getElementById('top');
+  function sc(){hd.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+
+  // muncul saat scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+
+  // jadwal jumantik
+  var weeks=[
+    {t:'Minggu 1',s:'Titik rawan di dalam rumah.',i:['Cek bak mandi','Cek vas bunga','Cek piringan pot tanaman di dalam rumah']},
+    {t:'Minggu 2',s:'Penampungan air dan wadah hewan.',i:['Periksa talang air','Periksa toren','Periksa tempat minum hewan peliharaan']},
+    {t:'Minggu 3',s:'Lingkungan di luar rumah.',i:['Kerja bakti pembersihan lingkungan luar','Bersihkan barang bekas di sekitar rumah']},
+    {t:'Minggu 4',s:'Evaluasi dan penaburan ulang.',i:['Evaluasi berkala oleh Kader Jumantik','Taburkan kembali larvasida (Abate)']}
+  ];
+  var KEY='jumantik-psn-cek', saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){saved={}}
+  var cur=0;
+  var list=document.getElementById('pList');
+  function total(){var n=0,d=0;weeks.forEach(function(w,wi){w.i.forEach(function(_,ii){n++;if(saved[wi+'-'+ii])d++})});return [d,n]}
+  function render(){
+    var w=weeks[cur];
+    document.getElementById('pTitle').textContent=w.t;
+    document.getElementById('pSub').textContent=w.s;
+    list.innerHTML='';
+    var done=0;
+    w.i.forEach(function(txt,ii){
+      var k=cur+'-'+ii, li=document.createElement('li'), lb=document.createElement('label'),
+          cb=document.createElement('input'), sp=document.createElement('span');
+      cb.type='checkbox'; cb.checked=!!saved[k]; if(cb.checked)done++;
+      sp.textContent=txt;
+      cb.addEventListener('change',function(){
+        if(cb.checked)saved[k]=1;else delete saved[k];
+        try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+        render();
+      });
+      lb.appendChild(cb);lb.appendChild(sp);li.appendChild(lb);list.appendChild(li);
+    });
+    document.getElementById('pText').textContent=done+' dari '+w.i.length+' tugas minggu ini';
+    document.getElementById('pBar').style.width=(done/w.i.length*100)+'%';
+    var t=total();
+    document.getElementById('pAll').textContent=t[0]+'/'+t[1]+' selesai';
+  }
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(b){
+    b.addEventListener('click',function(){
+      cur=+b.dataset.w;
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+      render();
+    });
+  });
+  render();
+</script>
+</body>
+</html>
